@@ -1,0 +1,18 @@
+body, p,h1,h2{font-family: Arial, Helvetica, sans-serif;}
+
+.container{
+  border: 1px solid #ddd;
+  -webkit-box-shadow : 5px 5px 5px #ddd;
+     -moz-box-shadow : 5px 5px 5px #ddd;
+          box-shadow : 5px 5px 5px #ddd;
+  margin             : 0px auto;
+  padding            : 10px;
+  width              : 940px; 
+}
+
+.output{
+  border: 4px dotted blue;
+  display         : block;
+  padding         : 20px;
+	overflow        : auto
+}

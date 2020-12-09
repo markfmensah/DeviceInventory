@@ -1,0 +1,267 @@
+//Problem Statement
+A program that will save a list of computer makes and models and the amount available. 
+This program will prompt the user to enter the amount of computer models available. 
+Next, using the number entered, the program will loop prompting the user to enter the computer make, model and amount available. 
+These values will be saved into separate arrays and displayed after everything is entered.
+
+
+
+
+//Nouns and Verbs
+Nouns : list of computer makes, list of computer models, amount
+Verbs : prompt, save, display
+
+
+
+
+//Defining Diagram
+INPUTS:
+  makeCount
+  makeName
+  modelCount
+  modelName
+
+PROCESSING:
+  prompt user for makeCount
+  prompt user for makeName
+  prompt user for modelCount
+  prompt user for modelName
+  calculate totalMake
+  calculate totalModel
+  calculate totalDevice
+
+OUTPUTS:
+  makeName
+  modelName
+  modelCount
+  totalMake
+  totalModel
+  totalDevice
+
+
+
+
+//Solution Algorithm
+GetModels(deviceMake)
+  set counter to zero
+  prompt for modelCount
+  WHILE (counter < modelCount)
+    prompt for deviceModelName
+    prompt for deviceModelCount
+  ENDWHILE
+  return deviceModelCount, deviceModelName
+END
+
+GetDevices(makeCount)
+  setCounter to zero
+  WHILE (counter < makeCount)
+    prompt for deviceMake
+    GetModels(deviceMake)
+  ENDWHILE
+  return deviceMake, deviceModelCount, deviceModelName
+END
+
+main
+  prompt for makeCount
+  GetDevices(makeCount)
+  set counter to zero
+  WHILE (counter < makeCount)
+    display deviceMake, deviceModelName, deviceModelCount, totalDeviceCount
+  ENDWHILE
+END
+  
+  
+  
+  
+//Test Cases
+
+TEST CASE 1:
+
+    INPUT VALUES: Samsung, 2, {s20, 21}, {Note10+, 2}
+                  Lenovo, 1, {Yoga, 12}
+    
+    EXPECTED RESULTS: 
+                  Device Make:Samsung
+
+                  Models
+                  Model Name:s20
+                  Model Amount:21
+
+                  Model Name:Note 10+
+                  Model Amount:2
+
+                  Total Model Count for 'Samsung':2
+                  Total Device Count for 'Samsung':23
+                  
+                  Device Make:Lenovo
+
+                  Models
+                  Model Name:Yoga
+                  Model Amount:12
+
+                  Total Model Count for 'Lenovo':1
+                  Total Device Count for 'Lenovo':12
+                  
+                  
+                  Total Device Count:35
+                  Thank You!
+                  
+    ACTUAL RESULTS:
+                  Device Make : Samsung
+
+                  Models
+                  Model Name : s20
+                  Model Amount: 21
+
+                  Model Name : Note 10+
+                  Model Amount: 2
+
+                  Total Model Count for 'Samsung' :  2
+                  Total Device Count for 'Samsung' :  23
+                  
+                  Device Make : Lenovo
+
+                  Models
+                  Model Name : Yoga
+                  Model Amount: 12
+
+                  Total Model Count for 'Lenovo' :  1
+                  Total Device Count for 'Lenovo' :  12
+                  
+                  
+                  Total Device Count : 35
+                  Thank You!
+                  
+                  
+TEST CASE 2:
+
+    INPUT VALUES: HP, 2 {Pavillion, 2}, {Envy, 3}
+    
+    EXPECTED RESULTS: 
+                  Device Make:HP
+
+                  Models
+                  Model Name:Pavillion
+                  Model Amount:2
+                  
+                  Model Name:Envy
+                  Model Amount:3
+
+                  Total Model Count for 'HP':2
+                  Total Device Count for 'HP':5
+                  
+                  
+                  
+                  Total Device Count:5
+                  Thank You!
+                  
+    ACTUAL RESULTS:
+                  Device Make : HP
+
+                  Models
+                  Model Name : Pavillion
+                  Model Amount: 2
+                  
+                  Model Name : Envy
+                  Model Amount: 3
+
+                  Total Model Count for 'HP' :  2
+                  Total Device Count for 'HP' :  5
+                  
+                  
+                  
+                  Total Device Count : 5
+                  Thank You!
+                  
+                  
+TEST CASE 3:
+
+    INPUT VALUES: ASUS, 1 {ROG, 32}
+    
+    EXPECTED RESULTS: 
+                  Device Make:ASUS
+                  
+                  Models
+                  Model Name:ROG
+                  Model Amount:32
+
+                  Total Model Count for 'ASUS':1
+                  Total Device Count for 'ASUS' :32
+                  
+                  
+                  Total Device Count:32
+                  Thank You!
+                  
+                  
+    ACTUAL RESULTS:
+                  Device Make : ASUS
+                  
+                  Models
+                  Model Name : ROG
+                  Model Amount: 32
+
+                  Total Model Count for 'ASUS' :  1
+                  Total Device Count for 'ASUS' :  32
+                  
+                  
+                  Total Device Count : 32
+                  Thank You!
+                  
+                  
+TEST CASE 4:
+
+    INPUT VALUES: Apple, 1 {IPhone 12, 1}
+                  OnePlus, 2 {8T, 1}, {9 Pro, 1}
+    
+    EXPECTED RESULTS: 
+                  Device Make:Apple
+                  
+                  Models
+                  Model Name:IPhone12
+                  Model Amount:1
+                  
+                  Total Model Count for 'Apple':1
+                  Total Device Count for 'Apple':1
+                  
+                  Device Make : OnePlus
+                  
+                  Models
+                  Model Name:8T
+                  Model Amount:1
+                  
+                  Model Name:9 Pro
+                  Model Amount:1
+                  
+                  Total Model Count for 'OnePlus':2
+                  Total Device Count for 'OnePlus':2
+                  
+                  
+                  Total Device Count:3
+                  Thank You!
+                  
+    ACTUAL RESULTS:
+                  Device Make : Apple
+                  
+                  Models
+                  Model Name : IPhone 12
+                  Model Amount: 1
+                  
+                  Total Model Count for 'Apple' :  1
+                  Total Device Count for 'Apple' :  1
+                  
+                  Device Make : OnePlus
+                  
+                  Models
+                  Model Name : 8T
+                  Model Amount: 1
+                  
+                  Model Name : 9 Pro
+                  Model Amount: 1
+                  
+                  Total Model Count for 'OnePlus' :  2
+                  Total Device Count for 'OnePlus' :  2
+                  
+                  
+                  Total Device Count : 3
+                  Thank You!
+                  
