@@ -2,7 +2,7 @@
 
 This website will prompt the user for a list of device makes, their models and the amount in inventory.
 
-##Author
+## Author
 
 Mark Mensah
 
